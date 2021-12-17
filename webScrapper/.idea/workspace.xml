@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab74fb0-a409-44fe-b4a9-c55b6a06d703" name="Changes" comment="" />
+    <list default="true" id="08fc859a-026c-47c9-96c7-f13f2e3a51bb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../geradorDeWordlist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../geradorDeWordlist/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +18,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="22PxPnxKVH4ITkQhEVLwvPtxmIU" />
+  <component name="ProjectId" id="22Q7HOKShw5TzMXFgCwJknSJAtc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -31,7 +33,7 @@
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="geradorDeWordlist" />
+      <module name="webScrapper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -55,11 +57,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6ab74fb0-a409-44fe-b4a9-c55b6a06d703" name="Changes" comment="" />
-      <created>1639753001611</created>
+      <changelist id="08fc859a-026c-47c9-96c7-f13f2e3a51bb" name="Changes" comment="" />
+      <created>1639757868506</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1639753001611</updated>
+      <updated>1639757868506</updated>
     </task>
     <servers />
   </component>
