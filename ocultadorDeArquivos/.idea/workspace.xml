@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c424e61b-74bb-40a9-9a6f-a418ecc63dce" name="Changes" comment="" />
+    <list default="true" id="94848da7-a97c-405f-aec7-e95ac4feb321" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../phoneNunber/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../phoneNunber/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,19 +18,22 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="22RCbps02ZapIJHP5U5ptl27Phz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="22RDRqvWEkxn3xFWzOu50kajgj4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="phoneNunber" />
+      <module name="ocultadorDeArquivos" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -49,11 +57,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c424e61b-74bb-40a9-9a6f-a418ecc63dce" name="Changes" comment="" />
-      <created>1639791087115</created>
+      <changelist id="94848da7-a97c-405f-aec7-e95ac4feb321" name="Changes" comment="" />
+      <created>1639791500228</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1639791087115</updated>
+      <updated>1639791500228</updated>
     </task>
     <servers />
   </component>
@@ -67,5 +75,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
