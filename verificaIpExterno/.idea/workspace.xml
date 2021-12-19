@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="94848da7-a97c-405f-aec7-e95ac4feb321" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="367401f0-6780-4bbb-b0ff-06dab785e718" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../ocultadorDeArquivos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ocultadorDeArquivos/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +15,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="22RDRqvWEkxn3xFWzOu50kajgj4" />
+  <component name="ProjectId" id="22V04qjB7xwW1Bi8XJISppRAq5e" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -33,7 +30,7 @@
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="ocultadorDeArquivos" />
+      <module name="verificaIpExterno" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -57,11 +54,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="94848da7-a97c-405f-aec7-e95ac4feb321" name="Changes" comment="" />
-      <created>1639791500228</created>
+      <changelist id="367401f0-6780-4bbb-b0ff-06dab785e718" name="Changes" comment="" />
+      <created>1639907258421</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1639791500228</updated>
+      <updated>1639907258421</updated>
     </task>
     <servers />
   </component>
