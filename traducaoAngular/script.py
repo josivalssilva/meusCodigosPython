@@ -11,21 +11,32 @@ def removeEspaco(string):
 		string = string[1:]
 	return string
 
-def traduz(string):
+def traduzir(string):
 	string = translator.translate(string, dest='pt').text
 	return string
 
 def validaString(string):
 	string = tiraQuebraLinha(string)
 	string = removeEspaco(string)
-	string = traduz(string)
+
+	traducaoAlternativa = {
+		'Building': 'Site',
+		'No racks': 'Sem racks'
+	}
+
+	naoTraduzir = ['Rack','Shelf']
+
+	if string in traducaoAlternativa:
+		string = traducaoAlternativa[string]
+	elif string not in naoTraduzir:
+		string = traduzir(string)
+		
 	return string
 
 arq = open('l10n-messages.properties','r+')
 novo = open('output.properties','w')
 
 linhas = []
-
 
 for linha in arq.readlines():
 	if linha[0] != '#': # or linha != '\n':
@@ -36,6 +47,7 @@ for linha in arq.readlines():
 			linhas.append(string)
 			print(string)
 			novo.write(itens[0] + ':' + string + '\n')
+		else:
+			novo.write('\n')
 	else:
-		novo.write(linha + '\n')
-		
+		novo.write(linha)
