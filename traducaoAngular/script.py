@@ -1,30 +1,38 @@
+from tokenize import String
 from googletrans import Translator
 translator = Translator()
 import sys, time
 
 arquivo = ''.join(sys.argv[1])
 print ('traduzindo: ', arquivo)
-
+espaco = True
 
 def tiraQuebraLinha(string):
 	if string[-1:] == '\n':
 		string = string[:-1]
+		print('2:',string)
+	print('3:',string)
 	return string
 
-def removeEspaco(string):
-	if string[0:1] == ' ':
-		string = string[1:]
-	return string
-
+def verificaEspaco(string):
+	if string[0:1] ==' ':
+		espaco = True
+	else:
+		espaco = False
+	print('5:',string)
+	
 def traduzir(string):
-	time.sleep(0.2)
+	espaco = True
+	verificaEspaco (string)
 	string = translator.translate(string, dest='pt').text
-	return ' '+string
+	#time.sleep(0.2)
+	if espaco:
+		string = ' '+string
+	return string
 
 def validaString(string):
 	string = tiraQuebraLinha(string)
-	# string = removeEspaco(string)
-
+	
 	traducaoAlternativa = {
 		'Building': 'Site',
 		'a restrições': 'as restrições',
@@ -52,20 +60,23 @@ def validaString(string):
 		'"on"': ' "sobre"',
 		'"On"': ' "Sobre"',
 		'"Control"': ' "Controle"',
-		'Close': 'Fechar'
-
+		'Close': 'Fechar',
+		' "Building",': ' "Site",'
 	}
 
-	naoTraduzir = ['Rack','Shelf','shelf','Blue Planet']
+	naoTraduzir = ['Rack',' "Shelf",','Blue Planet',' "Rack",',' "Rack"',' "Blue Planet",',' "Blue Planet"']
 
 
 	if string in traducaoAlternativa:
 		string = traducaoAlternativa[string]
-		print ('traduçãoAlternativa: ', string)
+		print ('6:',string)
 	elif string not in naoTraduzir:
 		string = traduzir(string)
-		print ('nãoTraduzir: ', string)
-		
+		print ('7:', string)
+
+	print('8:',string)
+	
+
 	return string
 
 arq = open(arquivo,'r+')
@@ -74,25 +85,21 @@ novo = open(arquivo+'PT','w')
 linhas = []
 
 for linha in arq.readlines():
-	if linha[0:5] == '    },':
-		novo.write('    },\n')
-
-	elif linha[0] == '{':
+	if linha[0] == '{':
 		novo.write('{\n')
-	
+	elif linha[0:5] == '    },':
+		novo.write('    },\n')
 	elif linha[0:5] == '    }':
 		novo.write('    }\n')
-
 	elif linha[0] == '}':
 		novo.write('}')
-
 	elif linha[0] != '#':
 		itens = linha.split(':')
 		if len(itens) > 1:
 			string = ''.join(itens[1:])
 			string = validaString(string)
 			linhas.append(string)
-			print(string)
+			print('10:',string)
 			novo.write(itens[0] + ':' + string + '\n')
 		else:
 			novo.write('\n')
