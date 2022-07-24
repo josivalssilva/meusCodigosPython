@@ -23,5 +23,3 @@ for item in lista:
     # print ('python3 /mnt/Backup/meusCodigosPython/traducaoAngular/scrypt.py '+ item)
     os.system('python3 /mnt/Backup/meusCodigosPython/traducaoAngular/script.py '+ item)
     arquivoRestante = arquivoRestante -1
-
-

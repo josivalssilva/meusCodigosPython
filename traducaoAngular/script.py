@@ -35,7 +35,6 @@ def validaString(string):
 	string = tiraQuebraLinha(string)
 	
 	traducaoAlternativa = {
-		'Building': 'Site',
 		'a restrições': 'as restrições',
 		'Restaurar a padrão': 'Restaurar por padrão',
 		'Full Load': 'Carga Máxima',
@@ -62,10 +61,15 @@ def validaString(string):
 		'"On"': ' "Sobre"',
 		'"Control"': ' "Controle"',
 		'Close': 'Fechar',
-		' "Building",': ' "Site",'
+		' "Building",': ' "Site",',
+		' "Room",': ' "Sala",',
+		' "Floor",': ' "Andar",',
+		'Building' : 'Site',
+		'Room': 'Sala',
+		'Floor': 'Andar,'
 	}
 
-	naoTraduzir = ['Rack',' "Shelf",','Blue Planet',' "Rack",',' "Rack"',' "Blue Planet",',' "Blue Planet"']
+	naoTraduzir = ['Rack',' "Shelf",','"Shelf"','Blue Planet',' "Rack",',' "Rack"',' "Blue Planet",',' "Blue Planet"']
 
 
 	if string in traducaoAlternativa:
@@ -84,11 +88,11 @@ arq = open(arquivo,'r+')
 novo = open(arquivo+'PT','w')
 
 linhas = []
-
-for linha in arq.readlines():
+numeroLinhas = arq.readlines()
+for linha in numeroLinhas:
 	if linha[0] == '{':
 		novo.write('{\n')
-	elif linha[0:5] == '    },':
+	elif linha[0:6] == '    },':
 		novo.write('    },\n')
 	elif linha[0:5] == '    }':
 		novo.write('    }\n')
@@ -104,6 +108,7 @@ for linha in arq.readlines():
 			novo.write(itens[0] + ':' + string + '\n')
 		else:
 			novo.write('\n')
+					
 	else:
 		novo.write(linha)
 	espaco = False
