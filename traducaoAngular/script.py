@@ -1,33 +1,34 @@
 from tokenize import String
+from typing import Type
 from googletrans import Translator
 translator = Translator()
 import sys, time
 
 arquivo = ''.join(sys.argv[1])
 print ('traduzindo: ', arquivo)
-espaco = True
+espaco = False
 
 def tiraQuebraLinha(string):
 	if string[-1:] == '\n':
 		string = string[:-1]
-		print('2:',string)
-	print('3:',string)
+		print('1:',string)
+	print('2:',string)
 	return string
 
 def verificaEspaco(string):
-	if string[0:1] ==' ':
+	global espaco
+	if string[0] ==' ':
 		espaco = True
-	else:
-		espaco = False
-	print('5:',string)
-	
+	print('4:',string)
+		
 def traduzir(string):
-	espaco = True
+	print('3:',string)
 	verificaEspaco (string)
 	string = translator.translate(string, dest='pt').text
 	#time.sleep(0.2)
 	if espaco:
 		string = ' '+string
+	print('5:',string)
 	return string
 
 def validaString(string):
@@ -99,11 +100,12 @@ for linha in arq.readlines():
 			string = ''.join(itens[1:])
 			string = validaString(string)
 			linhas.append(string)
-			print('10:',string)
+			print('9:',string)
 			novo.write(itens[0] + ':' + string + '\n')
 		else:
 			novo.write('\n')
 	else:
 		novo.write(linha)
+	espaco = False
 
 print ('<<<<<<<<<<<<<<<<<<<<<<<<<<<<Fim!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
