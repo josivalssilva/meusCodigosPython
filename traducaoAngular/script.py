@@ -17,6 +17,7 @@ def tiraEspaco(string):
 		espaco = True
 		string = string[1:]
 	return espaco, string		
+	
 		
 def traduzir(string):
 	string = translator.translate(string, dest='pt').text
@@ -29,6 +30,7 @@ def validaString(string):
 	if string in traducaoAlternativa:
 		string = traducaoAlternativa[string]
 	elif string not in naoTraduzir:
+		
 		string = traduzir(string)
 
 	if temEspaco:

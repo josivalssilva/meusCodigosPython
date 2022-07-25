@@ -1,4 +1,7 @@
-string = '  "Shelf",'
+from dataclasses import replace
+
+
+string = 'hoje é domingo'
 
 traducaoAlternativa = {
     'Building': 'Site',
@@ -27,7 +30,7 @@ traducaoAlternativa = {
     '"on"': ' "sobre"',
     '"On"': ' "Sobre"',
     '"Control"': ' "Controle"',
-    'Close': 'Fechar'
+    'domingo': 'monday'
 }
 
 naoTraduzir = ['Rack','  "Shelf",','shelf','Blue Planet']
@@ -35,11 +38,18 @@ naoTraduzir = ['Rack','  "Shelf",','shelf','Blue Planet']
 if string in traducaoAlternativa:
     string = traducaoAlternativa[string]
     print ('traduçãoAlternativa: ', string)
+
 elif string not in naoTraduzir:
-    string = 'TRADUZIU'
-    #print ('nãoTraduzir: ', string)
+    print ('nãoTraduzir: ', string)
+
+
+def trocaPalavra(string):
+    for palavra in traducaoAlternativa:
+        if palavra in string:   
+            return string.replace(palavra, traducaoAlternativa[palavra])
 
 print(string)
-
+print (trocaPalavra (string))
+# print (procuraPalavra('Closed'))
 
 
