@@ -1,7 +1,7 @@
 from dataclasses import replace
 
 
-string = 'hoje é domingo'
+string = 'hoje= é: domingo'
 
 traducaoAlternativa = {
     'Building': 'Site',
@@ -49,7 +49,10 @@ def trocaPalavra(string):
             return string.replace(palavra, traducaoAlternativa[palavra])
 
 print(string)
-print (trocaPalavra (string))
-# print (procuraPalavra('Closed'))
+if ':' in string:
+    print (trocaPalavra (string))
+elif '=' in string:
+    print (trocaPalavra (string))
+
 
 

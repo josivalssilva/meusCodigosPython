@@ -29,6 +29,8 @@ traducaoAlternativa = {
         '"Building",' : '"Site",',
 		'Room': 'Sala',
 		'Floor': 'Andar',
+        'Shelf': 'Shelf',
+        'shelf': 'shelf'
 	}
 
 naoTraduzir = ['Rack',' "Shelf",','"Shelf"','Blue Planet',' "Rack",',' "Rack"',' "Blue Planet",',' "Blue Planet"']

@@ -22,10 +22,12 @@ print ('Quantidade de arquivos: ',tamanho_lista)
 
 for item in lista:
     restante = 'Faltam: '
+    arquivo = ' arquivos'
+    
     if arquivoRestante<2:
         restante='Falta: '
-    print (restante, arquivoRestante, ' arquivos')
-    # print ('python3 /mnt/Backup/meusCodigosPython/traducaoAngular/scrypt.py '+ item)
+        arquivo = 'cle'
+    print (restante, arquivoRestante, arquivo)
     os.system('python3 /mnt/Backup/meusCodigosPython/traducaoAngular/script.py '+ item)
     arquivoRestante = arquivoRestante -1
     
