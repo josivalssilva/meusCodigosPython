@@ -17,7 +17,12 @@ def tiraEspaco(string):
 		espaco = True
 		string = string[1:]
 	return espaco, string		
-	
+
+def trocaPalavraEmFrase(string):
+    for palavra in traducaoAlternativa:
+        if palavra in string:   
+            string = string.replace(palavra, traducaoAlternativa[palavra])
+    return string
 		
 def traduzir(string):
 	string = translator.translate(string, dest='pt').text
@@ -29,9 +34,10 @@ def validaString(string):
 
 	if string in traducaoAlternativa:
 		string = traducaoAlternativa[string]
+	elif '{' in string and len(string) <= 1:
+		pass
 	elif string not in naoTraduzir:
-		
-		string = traduzir(string)
+		string = traduzir(trocaPalavraEmFrase(string))
 
 	if temEspaco:
 		string = " " + string
@@ -42,28 +48,17 @@ def validaString(string):
 arq = open(arquivo,'r+')
 novo = open(arquivo+'PT','w')
 
-linhas = []
-numeroLinhas = arq.readlines()
-for linha in numeroLinhas:
-	if linha[0] == '{':
-		novo.write('{\n')
-	elif linha[0:6] == '    },':
-		novo.write('    },\n')
-	elif linha[0:5] == '    }':
-		novo.write('    }\n')
-	elif linha[0] == '}':
-		novo.write('}')
-	elif linha[0] != '#':
-		itens = linha.split(':')
-		if len(itens) > 1:
-			string = ''.join(itens[1:])
-			string = validaString(string)
-			linhas.append(string)
-			novo.write(itens[0] + ':' + string + '\n')
-		else:
-			novo.write('\n')
-					
+for linha in arq.readlines():
+	
+	itens = linha.split(':')
+	
+	if len(itens) <= 1:
+		novo.write(''.join(itens))
 	else:
-		novo.write(linha)
+		string = ''.join(itens[1:])
+		string = validaString(string)
+		novo.write(itens[0] + ':' + string + '\n')
+
+	
 
 print ('<<<<<<<<<<<<<<<<<<<<<<<<<<<<Fim!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')

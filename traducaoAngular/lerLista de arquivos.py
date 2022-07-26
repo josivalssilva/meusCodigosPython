@@ -1,6 +1,8 @@
 from hashlib import scrypt
 import os
 
+from sympy import resultant
+
 path = '/home/josival/220202_bundles/'
 
 def files_path09(path):
@@ -19,7 +21,11 @@ arquivoRestante = tamanho_lista
 print ('Quantidade de arquivos: ',tamanho_lista)
 
 for item in lista:
-    print ('Restam:', arquivoRestante, ' arquivos')
+    restante = 'Faltam: '
+    if arquivoRestante<2:
+        restante='Falta: '
+    print (restante, arquivoRestante, ' arquivos')
     # print ('python3 /mnt/Backup/meusCodigosPython/traducaoAngular/scrypt.py '+ item)
     os.system('python3 /mnt/Backup/meusCodigosPython/traducaoAngular/script.py '+ item)
     arquivoRestante = arquivoRestante -1
+    
